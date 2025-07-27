@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int next=n+1;
+        while(true) {
+            int ori=next;
+            int reversed=0;
+            int temp=next;
+            while(temp>0) {
+                int digit=temp%10;
+                reversed=reversed*10+digit;
+                temp=temp/10;
+            }
+            if(ori==reversed) {
+                System.out.println("Next Palindrome:"+ ori);
+                break;
+            }
+            next++;
+        }
+    }
+}
