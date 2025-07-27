@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String n=s.nextLine();
+        StringBuilder str=new StringBuilder(n);
+        String reverse=str.reverse().toString();
+        System.out.println(reverse);
+    }
+}
