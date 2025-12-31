@@ -12,10 +12,10 @@ public class Main {
             t/=10;
         }
         if(sum==n) {
-            System.out.println("Amstrong number");
+            System.out.println("Armstrong number");
         }
         else {
-            System.out.println("Not an amstrong number");
+            System.out.println("Not an armstrong number");
         }
     }
 }
