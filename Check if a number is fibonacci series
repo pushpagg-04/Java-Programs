@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+        int a=0,b=1;
+        if(x==0 ||  x==1) {
+            System.out.println(x + " is a fibonacci series");
+        }
+        boolean found=false;
+        while(b<=x) {
+            int n=a+b;
+            a=b;
+            b=n;
+            if(b==x) {
+                found=true;
+                break;
+            }
+        }
+        if(found) {
+            System.out.println(x + " is a fibonacci series");
+        }
+        else {
+            System.out.println(x + " is not a fibonacci series");
+        }
+    }
+}
