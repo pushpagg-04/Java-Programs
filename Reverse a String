@@ -1,10 +1,11 @@
-import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-        Scanner s=new Scanner(System.in);
-        String n=s.nextLine();
-        StringBuilder str=new StringBuilder(n);
-        String reverse=str.reverse().toString();
-        System.out.println(reverse);
-    }
+import java.util.* ;
+import java.io.*; 
+public class Solution {	
+	public static String reverseString(String str) {
+		StringBuilder rev=new StringBuilder();
+		for(int i=str.length()-1;i>=0;i--) {
+			rev.append(str.charAt(i));
+		}
+		return rev.toString();
+	}
 }
