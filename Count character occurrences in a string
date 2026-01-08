@@ -1,0 +1,27 @@
+//this is my approach
+public class Solution {
+    public static int countOccurrences(int n, String s, char c) {
+        int count=0;
+        for(int i=0;i<n;i++) {
+            if(s.charAt(i)==c) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
+
+
+//optmized code
+public class Solution {
+    public static int countOccurrences(int n, String s, char c) {
+        int count=0;
+        char[] arr=s.toCharArray();
+        for(int i=0;i<n;i++) {
+            if(arr[i]==c) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
