@@ -1,0 +1,51 @@
+//This is my approach
+import java.util.* ;
+import java.io.*; 
+public class Solution {
+
+	public static boolean checkPalindrome(String str) {
+		StringBuilder rev=new StringBuilder();
+		String s1=str;
+		String s=s1.replaceAll("[^a-zA-Z0-9]","").toLowerCase();
+		for(int i=s.length()-1;i>=0;i--) {
+			rev.append(s.charAt(i));
+		}
+		String r=rev.toString().toLowerCase();
+		if(s.equals(r)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}
+
+
+
+//This is optimized solution
+import java.util.* ;
+import java.io.*; 
+public class Solution {
+
+	public static boolean checkPalindrome(String str) {
+		int left=0, right=str.length()-1;
+		while(left<right) {
+			char c1=str.charAt(left);
+			char c2=str.charAt(right);
+			if(!Character.isLetterOrDigit(c1)) {
+				left++;
+			}
+			else if(!Character.isLetterOrDigit(c2)) {
+				right--;
+			}
+			else {
+				if(Character.toLowerCase(c1)!=Character.toLowerCase(c2)) {
+					return false;
+				}
+				left++;
+				right--;
+			}
+		}
+		return true;
+	}
+}
