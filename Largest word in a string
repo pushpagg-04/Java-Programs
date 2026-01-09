@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        String[] words=s.split(" ");
+        String largest="";
+        for(String w:words) {
+            if(w.length()>largest.length()) {
+                largest=w;
+            }
+        }
+        System.out.println(largest);
+    }
+}
