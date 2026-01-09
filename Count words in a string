@@ -5,11 +5,7 @@ class Solution {
 	
     static int  countWords(String input) {
         String[] words=input.split(" ");
-        int count=0;
-        for(String w:words) {
-            count++;
-        }
-        return count;
+        return words.length;
     }
     
 	public static void main(String args[]) {
@@ -20,4 +16,5 @@ class Solution {
 		
 	}
 }
+
 //in coding ninjas
