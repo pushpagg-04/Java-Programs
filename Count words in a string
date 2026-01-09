@@ -1,13 +1,23 @@
+import java.util.* ;
+import java.io.*; 
 import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        String s=sc.nextLine();
-        String[] words=s.split(" ");
+class Solution {
+	
+    static int  countWords(String input) {
+        String[] words=input.split(" ");
         int count=0;
         for(String w:words) {
             count++;
         }
-        System.out.println(count);
+        return count;
     }
+    
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        int output = countWords(input);
+        System.out.println(output);
+		
+	}
 }
+//in coding ninjas
